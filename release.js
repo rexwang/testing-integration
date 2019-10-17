@@ -67,6 +67,7 @@ const handleMinorRelease = (version, currentBranch, currentRC) => {
           await exec(`git remote prune origin`);
         }
         await exec(`git push origin rc-v${version}`);
+
       }
 
       console.log(`rc-v${version} is pushed to origin, beta build will automatically start, please verify on https://jenkins.moveaws.com, and search for rc-v${version}`);
